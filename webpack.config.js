@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
   context: path.resolve(__dirname, 'src'),
@@ -31,7 +32,13 @@ const config = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     port: 3333
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      filename: './index.html', // dist
+      template: './template.html' // src
+    })
+  ]
 }
 
 module.exports = config

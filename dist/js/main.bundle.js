@@ -967,11 +967,15 @@ var _reactDom = __webpack_require__(18);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-(0, _reactDom.render)(_react2.default.createElement(
-    "div",
-    null,
-    "Hello from react"
-), document.getElementById("root"));
+var App = function App() {
+    return _react2.default.createElement(
+        "h1",
+        null,
+        "It works!"
+    );
+};
+
+(0, _reactDom.render)(_react2.default.createElement(App, null), document.getElementById("root"));
 
 /***/ }),
 /* 16 */
